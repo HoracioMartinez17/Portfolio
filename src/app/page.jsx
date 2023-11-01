@@ -5,7 +5,7 @@ import './app.scss';
 export default function Home() {
   return (
     <main >
-     <section className=''><Navbar/></section>
+     {/* <section className=''><Navbar/></section> */}
      <section className=''>Parallax</section>
      <section className=''>Services</section>
      <section className=''>Parallax</section>
