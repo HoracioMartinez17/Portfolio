@@ -1,13 +1,12 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-
 import "./contact.scss";
-import { useRef } from "react";
+
 
 const variants = {
   initial: {
-    y: 500,
+    y:100,
     opacity: 0,
   },
   animate: {
@@ -21,16 +20,13 @@ const variants = {
 };
 
 export const Contact = () => {
-  const ref = useRef();
 
-  const isInView = useInView(ref, { margin: "10px" });
   return (
     <motion.div
       className="contact"
       variants={variants}
       initial="initial"
-      whileInView="animate"
-      ref={ref}
+     animate="animate"
     >
       <motion.div className="textContainer" variants={variants}>
         <motion.h1>Contáctame!</motion.h1>
@@ -51,7 +47,7 @@ export const Contact = () => {
         <motion.form
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 1}}
         >
           <input type="text" required placeholder="Nombre" />
           <input type="email" required placeholder="Email" />
