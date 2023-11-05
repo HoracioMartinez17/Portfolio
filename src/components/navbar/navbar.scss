@@ -1,5 +1,8 @@
+@import '../../app/app.scss';
 .navbar{
-    height: 100px;
+    height: 6.25rem;
+
+
     .wrapper{
         width: clamp(200px, 83vw, 1366px);
         margin:auto;
@@ -10,6 +13,22 @@
         padding:0 1.3rem;
         span{
             font-weight: bold;
+        }
+        .links {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            @include mobile {
+                display: none;
+            }
+
+            a {
+                font-size: 1em;
+                font-weight: 600;
+            }
         }
         .social{
             display: flex;

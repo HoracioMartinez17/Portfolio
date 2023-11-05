@@ -5,16 +5,16 @@
     display: flex;
     position: relative;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
 
     h1 {
         font-size: 5rem;
         font-weight: 700;
-        padding-top: 2rem;
+        z-index: 29;
         @include mobile {
             font-size: 2.5rem;
             text-align: center;
-            padding-top: 0;
         }
     }
 

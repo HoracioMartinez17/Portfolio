@@ -1,4 +1,5 @@
 @import '../../app/app.scss';
+
 .contact {
     height: 100vh;
     width: clamp(200px, 83vw, 1366px);
@@ -20,21 +21,88 @@
         gap: 30px;
         padding-bottom: 2rem;
 
+          .card svg {
+            font-size: 24px;
+            font-weight: 700;
+            opacity: 1;
+            transition: opacity 0.25s;
+            z-index: 2;
+            cursor: pointer;
+          }
+
+          .card svg {
+            transition: 0.25s;
+            width: 20%;
+            border-radius: 50px;
+            transform: scale(1);
+          }
+          
+
+          
+
+          
+          .card svg:hover {
+            background-color: #0116fa;
+            animation: bounce_613 0.4s linear;
+          }
+
+
+          @keyframes bounce_613 {
+            40% {
+              transform: scale(1.4);
+            }
+          
+            60% {
+              transform: scale(0.8);
+            }
+          
+            80% {
+              transform: scale(1.2);
+            }
+          
+            100% {
+              transform: scale(1);
+            }
+          }
+
+        .item {
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+
+                margin-right: 0.4rem;
+            }
+
+            a {
+                text-decoration: underline;
+                /* Establecer el subrayado */
+
+            }
+
+        }
+
+
         @include mobile {
-           gap: 20px;
-           text-align: center;
-           align-items: center;
-          padding-bottom: 0;
+            gap: 20px;
+            text-align: center;
+            align-items: center;
+            padding-bottom: 0;
             font-size: 24px;
         }
 
         h1 {
             font-size: 70px;
+
             // line-height: 68pxZ
             @include mobile {
                 font-size: 36px;
-             }
-            
+            }
+
         }
 
         span {
@@ -47,10 +115,11 @@
         padding-top: 2rem;
         position: relative;
         width: 100%;
+
         @include mobile {
             padding-top: 0;
             width: 100%;
-         }
+        }
 
         .phoneSvg {
             position: absolute;

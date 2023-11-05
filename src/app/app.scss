@@ -17,13 +17,14 @@
   }
 
 }
-
-/* Tablet and Smaller Desktop */
 @mixin desktop {
-  @media (min-width: 701px) and (max-width: 1120px){
+  @media (max-width: 1424px) {
     @content;
   }
+
 }
+
+/* Tablet and Smaller Desktop */
 
 // /* Tablet and Smaller Desktop */
 // @media (min-width: 701px) and (max-width: 1120px) {

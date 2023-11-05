@@ -1,5 +1,6 @@
 'use client'
 import { Sidebar } from '../sidebar/Sidebar'
+import { Links } from '../sidebar/links/Links'
 import './navbar.scss'
 import {motion} from 'framer-motion'
 
@@ -15,9 +16,7 @@ export const Navbar = () => {
           Horacio Dev
       </motion.span>
         <div className="social">
-            <a href="instagram.com"><img src="/facebook.png" alt="" /></a>
-            <a href="instagram.com"><img src="/instagram.png" alt="" /></a>
-            <a href="instagram.com"><img src="/youtube.png" alt="" /></a>
+            <Links/>
         </div>
        </div>
     </nav>

@@ -1,46 +1,67 @@
+@import "../../app/app.scss";
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  position: relative;
+
+  @include desktop {
+    display: none;
+  }
+
+  @include mobile {
     display: flex;
-    flex-direction: column;
+  }
+
+  .bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: clamp(200px, 40vw, 300px);
+    background-color: #fff;
+    z-index: 4;
+
+    .links {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      a {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  button {
+    display: flex;
     justify-content: center;
     align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
     background-color: #fff;
-    color: #000;
+    position: fixed;
+    top: 28px;
+    right: 10px;
+    z-index: 4;
+    cursor: pointer;
 
-    .bg {
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: clamp(200px, 40vw, 300px);
-        background-color: #fff;
-        z-index: 4;
-        .links {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-
-            a {
-                font-size: 2rem;
-                font-weight: 600;
-            }
-        }
-    }
-
-    button {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: none;
-        background-color: transparent;
-        position: fixed;
-        top: 28px;
-        left: 5px;
-        z-index: 4;
-        cursor: pointer;
-    }
+    @include desktop {
+        display: none;
+      }
+    @include mobile {
+        display: flex;
+      }
+  }
 }
