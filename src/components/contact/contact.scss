@@ -11,8 +11,8 @@
     @include mobile {
         padding: 10px;
         width: 100%;
+        gap: 20px;
         flex-direction: column;
-        padding: 1rem;
     }
 
     .textContainer {
