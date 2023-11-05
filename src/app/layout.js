@@ -2,7 +2,7 @@ import {  DM_Sans } from 'next/font/google'
 import './globals.css'
 
 const Sans  = DM_Sans ({ subsets: ['latin'],
-                 weight:['600','700'],
+                 weight:['100','200','300','400','500','700'],
                 style: ['italic','normal'],
               variable: '--font-DM_Sans' })
 

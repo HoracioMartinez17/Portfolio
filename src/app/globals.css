@@ -1,20 +1,36 @@
-
 html{
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  line-height: 1.15;
 }
 
-*{
+
+/* El resto de tus estilos */
+* {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-  /* font-family : 'Dancing Script' , 'Helvetica Neue' , cursiva ; */
 }
-body{
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
   background-color: #0c0c1d;
   color: rgb(211, 211, 211);
 }
-a{
+
+html, body {
+  height: 100%;
+}
+
+
+a {
   text-decoration: none;
   color: inherit;
 }
+
+ul, ol {
+  list-style: none;
+}
+
+

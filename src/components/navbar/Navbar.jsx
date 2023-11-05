@@ -1,3 +1,4 @@
+'use client'
 import { Sidebar } from '../sidebar/Sidebar'
 import './navbar.scss'
 import {motion} from 'framer-motion'
@@ -5,7 +6,7 @@ import {motion} from 'framer-motion'
 export const Navbar = () => {
   return (
     <nav className='navbar'>
-      {/* <Sidebar/> */}
+      <Sidebar/>
        <div className="wrapper">
         <motion.span
         initial={{opacity:0, scale: 0.5}}
