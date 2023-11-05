@@ -12,6 +12,7 @@
         padding: 10px;
         width: 100%;
         flex-direction: column;
+        padding: 1rem;
     }
 
     .textContainer {
@@ -117,7 +118,7 @@
         width: 100%;
 
         @include mobile {
-            padding-top: 0;
+            padding-bottom: 1rem;
             width: 100%;
         }
 
