@@ -107,7 +107,7 @@ export const Contact = () => {
         >
           <input type="text" required placeholder="Nombre" />
           <input type="email" required placeholder="Email" />
-          <textarea rows={8} required placeholder="Mensaje" />
+          <textarea rows={7} required placeholder="Mensaje" />
           <button class="btn" type="button">
             <strong>Enviar</strong>
             <div id="container-stars">
