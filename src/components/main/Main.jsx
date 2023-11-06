@@ -7,10 +7,7 @@ export const Main = () => {
   return (
     <>
     <main>
-        <section className='section' id="Sobre mí">
-        <Parallax type="Sobre mí" />
-      </section>
-      <section className='section'>
+      <section className='section'id="Sobre mí">
         <AboutMe />
       </section>
       <section className='section' id="Portafolio">

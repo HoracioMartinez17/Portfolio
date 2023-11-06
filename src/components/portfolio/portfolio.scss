@@ -1,27 +1,32 @@
 @import '../../app/app.scss';
+
 .portfolio {
     position: relative;
-
+    height: 100%;
     .progress {
         position: sticky;
         top: 0;
         left: 0;
         padding-top: 35px;
         text-align: center;
-        color: #ffa500;
-        font-size: 30px;
-        h1{
+        h1 {
             font-size: 2rem;
-           }
+            color: #ffa500;
+
+            @include mobile {
+                font-size: 1.6rem;
+            }
+        }
 
         @include mobile {
-            padding-top: calc(100vh - 100px);
-            font-size: 24px;
+            width: 100%;
+            padding-top: 0.8rem;
         }
 
         .progressBar {
             height: 10px;
             background-color: #fffffe;
+            border-radius: 10px;
         }
     }
 
@@ -43,7 +48,7 @@
             gap: 30px;
 
             @include mobile {
-               flex-direction: column;
+                flex-direction: column;
 
             }
 
@@ -54,10 +59,10 @@
                 gap: 20px;
 
                 @include mobile {
-                   transform: none !important;
-                   padding: 10px;
-                   align-items: center;
-                   text-align: center;
+                    transform: none !important;
+                    padding: 10px;
+                    align-items: center;
+                    text-align: center;
                 }
 
                 h2 {
@@ -90,6 +95,7 @@
             .imageContainer {
                 flex: 1;
                 height: 50%;
+
                 @include mobile {
                     width: 100%;
                     max-height: 300px
@@ -103,7 +109,7 @@
                     @include mobile {
                         object-fit: contain;
                     }
-    
+
                 }
             }
         }

@@ -23,7 +23,7 @@
     bottom: 0;
     width: clamp(200px, 40vw, 300px);
     background-color: #fff;
-    z-index: 4;
+    z-index: 99;
 
     .links {
       position: absolute;

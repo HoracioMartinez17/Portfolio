@@ -70,7 +70,7 @@ export const Portfolio = () => {
   return (
     <div className="portfolio" ref={ref}>
       <div className="progress">
-        <h1>!Proyectos Destacados!</h1>
+        <h1>!Proyectos Top!</h1>
         <motion.div
           style={{ scaleX: scaleX }}
           className="progressBar"
