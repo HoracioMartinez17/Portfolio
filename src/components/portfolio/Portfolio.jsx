@@ -40,8 +40,10 @@ const Card = ({ item }) => {
   const y= useTransform(scrollYProgress, [0,1],[-300, 300])
 
 
-  return (<section className="section">
-    <div className="container">
+  return (<section className="section ">
+
+    <div className="containerPorfolio">
+
     <div className="wrapper">
     <div className="imageContainer" ref={ref}>
       <img src={item.img}/>
@@ -69,6 +71,9 @@ export const Portfolio = () => {
   });
   return (
     <div className="portfolio" ref={ref}>
+                <div id="container-stars">
+              <div id="stars"></div>
+            </div>
       <div className="progress">
         <h1>!Proyectos Top!</h1>
         <motion.div

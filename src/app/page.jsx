@@ -3,14 +3,10 @@ import { Hero } from "@/components/hero/Hero";
 import { Parallax } from "@/components/parallax/Parallax";
 import "./app.scss";
 import { Portfolio } from "@/components/portfolio/Portfolio";
-import { AboutMe } from "@/components/aboutMe/AboutMe";
+import { AboutMe } from "@/components/aboutMe/AboutMe.1";
 import { Contact } from "@/components/contact/Contact";
 import { HomePage } from "@/components/homePage/HomePage";
 
-
-
 export default function Home() {
-  return (
-    <HomePage/>
-  );
+  return <HomePage />;
 }

@@ -43,28 +43,31 @@ const sliderVariants = {
 export const Hero = () => {
   return (
     <div className='hero'>
+                    <div id="container-stars">
+              <div id="stars"></div>
+            </div>
       <div className="wrapper">
       <motion.div className="textContainer"  variants={textVariants} initial='initial' animate='animate'> 
         <motion.h2  variants={textVariants} >Horacio Martinez</motion.h2>
         <motion.h1  variants={textVariants}>Desarrollador Full Stack</motion.h1>
         <div className="buttons">
-          <motion.button class="btn" type="button"  variants={textVariants}><a href='#Portafolio'>Mira mis trabajos!</a>
+          <motion.button className="btn" type="button"  variants={textVariants}><a href='#Portafolio'>Mira mis trabajos!</a>
             <div id="container-stars">
               <div id="stars"></div>
             </div>
 
             <div id="glow">
-              <div class="circle"></div>
-              <div class="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
             </div></motion.button>
-          <motion.button class="btn" type="button" variants={textVariants}><a href='#Contacto'>Contáctame</a>
+          <motion.button className="btn" type="button" variants={textVariants}><a href='#Contacto'>Contáctame</a>
             <div id="container-stars">
               <div id="stars"></div>
             </div>
 
             <div id="glow">
-              <div class="circle"></div>
-              <div class="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
             </div></motion.button>
         </div>
         <motion.img src="/scroll.png" alt=""  variants={textVariants} animate='scrollButton'/>

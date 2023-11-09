@@ -54,7 +54,7 @@
     position: fixed;
     top: 28px;
     right: 10px;
-    z-index: 4;
+    z-index: 100;
     cursor: pointer;
 
     @include desktop {
