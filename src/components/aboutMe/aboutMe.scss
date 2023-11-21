@@ -151,17 +151,18 @@
                         display: flex;
                         align-items: center;
                         gap: 5px;
+
                         span {
-                             display: flex;
-                      align-items: center;
-                      gap: 5px;
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
 
 
-                        svg {
-                            width: 20px;
-                            height: 20px;
+                            svg {
+                                width: 20px;
+                                height: 20px;
+                            }
                         }
-                    }
                     }
                 }
             }
@@ -198,8 +199,6 @@
         .pyramid-loader {
             display: flex;
             align-self: center;
-            align-items: center;
-        justify-content: center;
             position: relative;
             width: 300px;
             height: 300px;

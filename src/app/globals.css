@@ -1,11 +1,12 @@
 html{
+  height: 100vh;
+  overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  scroll-padding: 0;
   scroll-behavior: smooth;
   line-height: 1.15;
 }
 
-
-/* El resto de tus estilos */
 * {
   padding: 0;
   margin: 0;
@@ -13,14 +14,10 @@ html{
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
 body {
   background-color: #0c0c1d;
+  height: 100%;
   color: rgb(211, 211, 211);
-}
-
-html, body {
-  height: 100vh;
 }
 
 

@@ -1,6 +1,7 @@
 'use client'
 import {motion} from 'framer-motion'
 import './hero.scss'
+import Image from 'next/image';
 const textVariants = {
   initial:{
     x: -500,
@@ -40,6 +41,7 @@ const sliderVariants = {
 };
 
 
+
 export const Hero = () => {
   return (
     <div className='hero'>
@@ -77,7 +79,10 @@ export const Hero = () => {
         Desallorrador Front-End y Back-End
       </motion.div>
       <div className="imageContainer">
-        <img src='/hero.png'/>
+        <Image src='/hero1.png'
+        width={500}
+        height={500}
+        alt="Picture of the author"/ >
       </div>
     </div>
   )

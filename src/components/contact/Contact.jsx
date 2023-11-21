@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import "./contact.scss";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
