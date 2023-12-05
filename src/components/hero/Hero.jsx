@@ -1,6 +1,7 @@
 'use client'
 import {motion} from 'framer-motion'
 import './hero.scss'
+import Image from 'next/image';
 const textVariants = {
   initial:{
     x: -500,
@@ -38,6 +39,7 @@ const sliderVariants = {
     },
   },
 };
+
 
 
 export const Hero = () => {
