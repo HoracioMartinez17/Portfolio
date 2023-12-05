@@ -1,32 +1,24 @@
 "use client";
 import { useRef } from "react";
-import { motion, useScroll, useSpring,useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import "./portfolio.scss";
 
 const items = [
   {
     id: 1,
-    title: "Reat Ecomerce",
-    img: "https://cdn.pixabay.com/photo/2019/10/07/13/18/mystery-4532583_1280.jpg",
-    desc: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturblanditiis beatae facere animi? Mollitia delectus, quo maxime errorblanditiis optio provident ipsam? Hic inventore labore natus quod aspernatur culpa possimus",
+    title: "SoundScape",
+    img: "/apollofy.png",
+    desc: " SoundScape es una popular plataforma de streaming de música digital que ofrece una amplia colección de pistas, álbumes, podcasts y otro contenido de audio. La interfaz de la aplicación está construida con React + Vite + Typescript. Puedes ver la estructura y las tecnologías utilizadas en el repositorio de GitHub.",
+    url: "https://soundscape-music-player.vercel.app/",
+    url_git: "https://github.com/HoracioMartinez17/soundscape-deploy"
   },
   {
     id: 2,
-    title: "Next.js Ecomerce",
-    img: "https://cdn.pixabay.com/photo/2016/06/08/15/44/landscape-1444023_1280.jpg",
-    desc: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturblanditiis beatae facere animi? Mollitia delectus, quo maxime errorblanditiis optio provident ipsam? Hic inventore labore natus quod aspernatur culpa possimus",
-  },
-  {
-    id: 3,
-    title: "Vanilla Js Ecomerce",
-    img: "https://cdn.pixabay.com/photo/2018/04/29/23/03/fantasy-3361332_1280.jpg",
-    desc: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturblanditiis beatae facere animi? Mollitia delectus, quo maxime errorblanditiis optio provident ipsam? Hic inventore labore natus quod aspernatur culpa possimus",
-  },
-  {
-    id: 4,
-    title: "Reat Music App",
-    img: "https://cdn.pixabay.com/photo/2017/12/26/17/56/fantasy-3041033_1280.jpg",
-    desc: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequaturblanditiis beatae facere animi? Mollitia delectus, quo maxime errorblanditiis optio provident ipsam? Hic inventore labore natus quod aspernatur culpa possimus",
+    title: "MovieHub",
+    img: "/MovieHub.png",
+    desc: "MovieHub es una aplicación que te permite gestionar una lista de películas. Cada película de la aplicación tiene un nombre, una imagen, una fecha y un género. Podrá realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) en estas películas. La interfaz de la aplicación está construida con Next.js + Typescript. Puedes ver la estructura y las tecnologías utilizadas en el repositorio de GitHub.",
+    url: "https://front-end-movie-hub-next-13.vercel.app/",
+    url_git: "https://github.com/HoracioMartinez17?tab=repositories"
   },
 ];
 
@@ -37,25 +29,61 @@ const Card = ({ item }) => {
     target: ref,
   });
 
-  const y= useTransform(scrollYProgress, [0,1],[-300, 300])
+  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
+  return (
+    <section className="section_porfolio ">
+      <div className="containerPorfolio">
+        <div className="wrapper">
+          <div className="imageContainer" ref={ref}>
+            <img src={item.img} />
+          </div>
+          <motion.div className="textContainer" style={{ y }}>
+            <h2>{item.title}</h2>
+            <p>{item.desc}</p>
 
-  return (<section className="section ">
-
-    <div className="containerPorfolio">
-
-    <div className="wrapper">
-    <div className="imageContainer" ref={ref}>
-      <img src={item.img}/>
-    </div>
-      <motion.div className='textContainer' style= {{y}}>
-        <h2>{item.title}</h2>
-        <p>{item.desc}</p>
-        <button>See Demo</button>
-      </motion.div>
-    </div>
-    </div>
-  </section>
+            <div className="portfolio_div-button">
+              <button class="button">
+                <div class="text">
+                  <a href={item.url} target="_blank">
+                    Demo{" "}
+                  </a>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="328"
+                  height="328"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    fill="#999999"
+                    d="M12 4v2h6.586l-6.536 6.536a6.954 6.954 0 0 0-2.05 4.95V28h2V17.485a4.968 4.968 0 0 1 1.464-3.535L20 7.414V14h2V4Z"
+                  />
+                </svg>
+              </button>
+              <button class="button_git">
+                <div class="text">
+                  <a href={item.url_git} target="_blank">
+                    GitHub{" "}
+                  </a>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="328"
+                  height="328"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    fill="#999999"
+                    d="M12 4v2h6.586l-6.536 6.536a6.954 6.954 0 0 0-2.05 4.95V28h2V17.485a4.968 4.968 0 0 1 1.464-3.535L20 7.414V14h2V4Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
   );
 };
 
@@ -71,11 +99,11 @@ export const Portfolio = () => {
   });
   return (
     <div className="portfolio" ref={ref}>
-                <div id="container-stars">
-              <div id="stars"></div>
-            </div>
+      <div id="container-stars">
+        <div id="stars"></div>
+      </div>
       <div className="progress">
-        <h1>!Proyectos Top!</h1>
+        <h1>¡Proyectos Top!</h1>
         <motion.div
           style={{ scaleX: scaleX }}
           className="progressBar"

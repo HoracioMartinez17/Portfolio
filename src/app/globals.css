@@ -1,8 +1,4 @@
-html{
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  line-height: 1.15;
-}
+
 
 
 /* El resto de tus estilos */

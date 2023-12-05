@@ -156,8 +156,12 @@
 
             h2 {
                 font-size: 30px;
-                color: rgb(102, 51, 153);
-                letter-spacing: 10px;
+                background-image: linear-gradient(to right, hsl(230, 100%, 56%),#ea19d8);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-transform: uppercase;
+                font-weight: 700;
+                letter-spacing: 5px;
             }
 
             .buttons {

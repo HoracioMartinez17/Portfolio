@@ -77,7 +77,7 @@ export const Hero = () => {
         Desallorrador Front-End y Back-End
       </motion.div>
       <div className="imageContainer">
-        <img src='/hero.png'/>
+        <img src='/profil-anime1.png'/>
       </div>
     </div>
   )

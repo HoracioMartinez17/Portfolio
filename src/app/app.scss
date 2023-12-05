@@ -1,7 +1,3 @@
-.section {
-  height: 100vh;
-  scroll-snap-align: center;
-}
 
 /* Mobile */
 @mixin mobile {
@@ -21,9 +17,38 @@
   @media (max-width: 5687px) {
     @content;
   }
-
+  
 }
 
+html{
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  line-height: 1.15;
+
+  @include mobile {
+    scroll-snap-type: none;
+}
+}
+
+.section {
+  height: 100vh;
+  scroll-snap-align: center;
+  
+  @include mobile {
+    padding: 0;
+    scroll-snap-align: none;
+}
+}
+
+.section_porfolio {
+  height: 100vh;
+  scroll-snap-align: center;
+  
+  @include mobile {
+    padding: 0;
+    scroll-snap-align: none;
+}
+}
 /* Tablet and Smaller Desktop */
 
 // /* Tablet and Smaller Desktop */

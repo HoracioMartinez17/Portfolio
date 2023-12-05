@@ -9,10 +9,10 @@
     transition: 0.5s;
     animation: gradient_301 5s ease infinite;
     background: linear-gradient(180deg, #0c0c1d, #111132),
-    linear-gradient(137.48deg, #9c5ef8 67%, #0044ff 87%);
+        linear-gradient(137.48deg, #9c5ef8 67%, #0044ff 87%);
     background-origin: border-box;
     background-clip: content-box,
-    border-box;
+        border-box;
 
     #container-stars {
         position: absolute;
@@ -113,12 +113,14 @@
             box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
         }
     }
+
     .progress {
         position: sticky;
         top: 0;
         left: 0;
         padding-top: 35px;
         text-align: center;
+
         h1 {
             font-size: 2rem;
             color: #ffa500;
@@ -161,7 +163,6 @@
 
             @include mobile {
                 flex-direction: column;
-
             }
 
             .textContainer {
@@ -173,12 +174,19 @@
                 @include mobile {
                     transform: none !important;
                     padding: 10px;
+                    gap: 10px;
                     align-items: center;
                     text-align: center;
                 }
 
                 h2 {
                     font-size: 60px;
+                    background-image: linear-gradient(to right, hsl(150, 100%, 66%), #C031B5);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    letter-spacing: 1px;
 
                     @include mobile {
                         font-size: 36px;
@@ -186,37 +194,109 @@
                 }
 
                 p {
-                    color: gray;
-                    font-size: 1rem;
+
+                    text-shadow: 1px 1px 2px rgb(149, 149, 149), 0 0 1em blue, 0 0 0.2em blue;
+                    font-size: 1.3rem;
+                    font-weight: 450;
+                    line-height: 25px;
+                    text-wrap: balance;
+                    letter-spacing: 1px;
 
                     @include mobile {
-                        font-size: 16px;
+                        font-size: 1.2rem;
                     }
                 }
 
-                button {
-                    padding: 5px;
-                    width: 100px;
-                    background-color: #ffa500;
-                    border: none;
-                    border-radius: 10px;
-                    cursor: pointer;
+                .portfolio_div-button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 1rem;
+                    .button {
+                        background-color: #ffffff00;
+                        color: #fff;
+                        width: 6.5em;
+                        height: 2.9em;
+                        border: #3654ff 0.2em solid;
+                        border-radius: 11px;
+                        text-align: left;
+                        transition: all 0.6s ease;
+                      }
+                      .button svg {
+                        width: 1.6em;
+                        margin: -10.7rem 4.3em 1em;
+                        position: absolute;
+                        display: flex;
+                        transition: all 0.6s ease;
+
+
+                      }
+                      .button:hover {
+                        background-color: #480b88;
+                        cursor: pointer;
+                      }
+                      .button:hover svg {
+                        transform: translateX(5px);
+                      }
+                      
+                      .text {
+                        margin: 0 1.5em
+                      }
+
+
+                      
+
+                      .button_git {
+                        background-color: #ffffff00;
+                        color: #fff;
+                        width: 6.5em;
+                        height: 2.9em;
+                        border: #3654ff 0.2em solid;
+                        border-radius: 11px;
+                        text-align: left;
+                        transition: all 0.6s ease;
+                      }
+                      .button_git:hover {
+                        background-color: #480b88;
+                        cursor: pointer;
+                      }
+                      .button_git svg {
+                        width: 1.6em;
+                        margin: -10.7rem 4.5em 1em;
+                        position: absolute;
+                        display: flex;
+                        transition: all 0.6s ease;
+                        @include mobile {
+                            margin: -10.7rem 4.5em 1em;
+                        }
+
+                      }
+                      
+                      .button_git:hover svg {
+                        transform: translateX(5px);
+                      }
+                      
+                      .text {
+                        margin: 0 1.5em
+                      }
+
                 }
+
             }
 
             .imageContainer {
                 flex: 1;
-                height: 50%;
+                height: 70%;
 
                 @include mobile {
                     width: 100%;
-                    max-height: 300px
+                    max-height: 250px
                 }
 
                 img {
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
+                    object-fit: contain;
 
                     @include mobile {
                         object-fit: contain;
